@@ -234,6 +234,7 @@ main, .masterhead {
 .wset--main-table-list table th,
 .wset--main-table-list table td {
   padding: 1rem 0.5rem;
+  word-wrap: break-word;
 }
 .wset--main-table-list table th:first-child,
 .wset--main-table-list table td:first-child {

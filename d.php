@@ -32,8 +32,32 @@
 // print_r($arr);
 
 
-include('./configs/config.php');
-include('./configs/db.php');
+// include('./configs/config.php');
+// include('./configs/db.php');
 
-$x =set_config($conn, 'table_count', '1');
-echo $x;
+// $x =set_config($conn, 'table_count', '1');
+// echo $x;
+
+
+$__CSV = "PNAME, NAME, EMAIL, PASSWORD
+นาง, เขมิกา คัทยา, 0001@dev, 123, U
+นาง, จิตตินี จิตรกัญญา, 0002@dev, 123, U";
+
+function account_upload_CSV(string $CSV)
+{
+    $__EXP = explode("\n", $CSV);
+    foreach ($__EXP as $v) {
+        $__FIELD = explode(",", $v);
+
+        $PNAME = $__FIELD[0];
+        $NAME = $__FIELD[1];
+        $EMAIL = $__FIELD[2];
+        $PASSWORD = $__FIELD[3];
+
+        echo $PNAME . ' -- ';
+        echo $NAME . ' -- ';
+        echo $EMAIL . ' -- ';
+        echo $PASSWORD . ' -- ';
+        echo '<br>';
+    }
+}

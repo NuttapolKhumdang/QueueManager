@@ -2,6 +2,7 @@
 
 session_start();
 
+include("static.php");
 function isAuth(bool $onlyAdmin = false, bool $redirect = true)
 {
     if ($onlyAdmin) {

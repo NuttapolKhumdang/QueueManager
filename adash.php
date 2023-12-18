@@ -25,9 +25,15 @@
                 <span class="material-icons-round">history</span>
                 <p>ประวัติการใช้งาน</p>
             </a>
+
             <a href="aview.php?accounts">
                 <span class="material-icons-round">manage_accounts</span>
                 <p>บัญชีผู้ใช้ทั้งหมด</p>
+            </a>
+
+            <a href="auadd.php">
+                <span class="material-icons-round">person_add</span>
+                <p>เพิ่มบัญชีผู้ใช้</p>
             </a>
 
             <p>จัดการคอมพิวเตอร๋</p>

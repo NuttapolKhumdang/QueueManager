@@ -102,18 +102,20 @@
         <main class="wset--main-table-list">
             <table>
                 <tr>
-                    <th class="center">ลำดับ</th>
+                    <th class="center">UID</th>
                     <th class="left">ชื่อผู้ใช้</th>
+                    <th class="left">อีเมล์</th>
                     <th class="center">สถานะ</th>
                     <th class="center">เพิ่มเติม</th>
                 </tr>
 
-                <?php $result = $conn->query("SELECT * FROM `user` ORDER BY `ID`"); ?>
+                <?php $result = $conn->query("SELECT * FROM `user` ORDER BY `level`"); ?>
 
                 <?php while ($r = $result->fetch_assoc()) { ?>
                     <?php
                     $rindex = $r["ID"];
                     $rname = $r["name"];
+                    $remail = $r["email"];
 
                     $rlevel = $r["level"];
                     $rstatus = null;
@@ -123,10 +125,11 @@
                     ?>
 
                     <tr>
-                        <td style="width: 10%;" class="center"><?php echo $rindex ?></td>
-                        <td style="width: 40%;" class="left"><?php echo $rname ?></td>
+                        <td style="width: 5%;" class="center"><?php echo $rindex ?></td>
+                        <td style="width: 30%;" class="left"><?php echo $rname ?></td>
+                        <td style="width: 30%;" class="left"><?php echo $remail ?></td>
                         <td style="width: 20%;" class="center"><?php echo $rstatus ?></td>
-                        <td style="width: 30%;" class="center">
+                        <td style="width: 15%;" class="center">
                             <a class="static-inline" href="?history&uid=<?php echo $rindex ?>" title="รายละเอียด">
                                 <span class="material-icons-round">read_more</span>
                             </a>

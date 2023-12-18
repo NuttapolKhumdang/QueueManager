@@ -1,5 +1,5 @@
 <header class="masterhead">
-    <h1 onclick="window.location.href = '/wings'">Wings</h1>
+    <h3 onclick="window.location.href = '/wings'">หน้าหลัก</h3>
 
     <menu>
         <?php if (isAuth(redirect: false)) { ?>
